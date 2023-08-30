@@ -23,7 +23,7 @@ endif()
 add_library(rapidjson INTERFACE)
 find_package(RapidJSON)
 if(RapidJSON_FOUND)
-  target_include_directories(rapidjson INTERFACE ${RAPIDJSON_INCLUDE_DIRS})
+  target_include_directories(rapidjson INTERFACE ${RapidJSON_INCLUDE_DIRS})
 else()
   message(STATUS "Did not find RapidJSON in the system root. Fetching RapidJSON now...")
   FetchContent_Declare(
